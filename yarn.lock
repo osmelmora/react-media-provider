@@ -2360,6 +2360,15 @@ dom-testing-library@^2.0.0:
     pretty-format "^22.4.3"
     wait-for-expect "^0.4.0"
 
+dom-testing-library@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/dom-testing-library/-/dom-testing-library-2.3.0.tgz#d8579c54447b7e3630a8a013b07117f931239f0f"
+  dependencies:
+    jest-dom "^1.0.0"
+    mutationobserver-shim "^0.3.2"
+    pretty-format "^22.4.3"
+    wait-for-expect "^0.4.0"
+
 dom-urls@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/dom-urls/-/dom-urls-1.1.0.tgz#001ddf81628cd1e706125c7176f53ccec55d918e"

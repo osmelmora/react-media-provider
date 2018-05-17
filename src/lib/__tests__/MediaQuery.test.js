@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-testing-library';
+import 'dom-testing-library/extend-expect';
 
 import { MediaQuery } from '../MediaQuery';
 
@@ -65,13 +66,13 @@ describe('MediaQuery', () => {
     const { queryByText } = render(<App />);
 
     for (const [key, query] of Object.entries(QUERY_MAP)) {
-      expect(queryByText(`${key}: ${query}`)).not.toBeNull();
+      expect(queryByText(`${key}: ${query}`)).toBeInTheDOM();
     }
 
     jest.runAllTimers();
 
     for (const [key, query] of Object.entries(QUERY_MAP)) {
-      expect(queryByText(`${key}: ${query}`)).toBeNull();
+      expect(queryByText(`${key}: ${query}`)).not.toBeInTheDOM();
     }
   });
 });
