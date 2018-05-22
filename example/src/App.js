@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MediaQuery } from 'react-mq-provider';
+import { MediaQuery } from 'react-media-provider';
 
 export const MEDIA_QUERY_MAP = {
   xs: '(max-width: 376px)',
