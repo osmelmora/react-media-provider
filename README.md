@@ -22,7 +22,7 @@ yarn add react-media-provider
 import React from 'react';
 import { render } from 'react-dom';
 
-import { MediaQuery } from 'react-media-provider';
+import { MediaProvider } from 'react-media-provider';
 
 const QUERY_MAP = {
   small: '(max-width: 600px)',
@@ -31,11 +31,11 @@ const QUERY_MAP = {
 };
 
 const App = () => (
-  <MediaQuery queryMap={QUERY_MAP}>
+  <MediaProvider queryMap={QUERY_MAP}>
     <div>
       You can use the Consumer wherever you want inside
-      the component tree of the MediaQuery provider.
-      <MediaQuery.Consumer>
+      the MediaProvider components tree.
+      <MediaProvider.Consumer>
         {({ small, medium, large }) => (
           <React.Fragment>
             {small && <div>small: {QUERY_MAP.small}</div>}
@@ -43,9 +43,9 @@ const App = () => (
             {large && <div>large: {QUERY_MAP.large}</div>}
           </React.Fragment>
         )}
-      </MediaQuery.Consumer>
+      </MediaProvider.Consumer>
     </div>
-  </MediaQuery>
+  </MediaProvider>
 );
 
 render(<App>, document.getElementById('app'));

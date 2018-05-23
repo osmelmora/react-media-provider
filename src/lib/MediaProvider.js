@@ -9,7 +9,7 @@ import { Subscribe } from './Subscribe';
 
 const MediaQueryContext = createContext({});
 
-export class MediaQuery extends React.Component {
+export class MediaProvider extends React.Component {
   static Consumer = MediaQueryContext.Consumer;
 
   static propTypes = {
@@ -41,4 +41,4 @@ export class MediaQuery extends React.Component {
   }
 }
 
-polyfill(MediaQuery);
+polyfill(MediaProvider);

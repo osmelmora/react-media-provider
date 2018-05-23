@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MediaQuery } from 'react-media-provider';
+import { MediaProvider } from 'react-media-provider';
 
 export const MEDIA_QUERY_MAP = {
   xs: '(max-width: 376px)',
@@ -12,11 +12,11 @@ export const MEDIA_QUERY_MAP = {
 export default class App extends Component {
   render() {
     return (
-      <MediaQuery queryMap={MEDIA_QUERY_MAP}>
+      <MediaProvider queryMap={MEDIA_QUERY_MAP}>
         <div>
           <h1>React Media Provider Demo</h1>
           <h2>Resize this window to see what happens!</h2>
-          <MediaQuery.Consumer>
+          <MediaProvider.Consumer>
             {({ xs, sm, md, lg, xl }) => (
               <React.Fragment>
                 {xs && <div>xs: {MEDIA_QUERY_MAP.xs}</div>}
@@ -26,9 +26,9 @@ export default class App extends Component {
                 {xl && <div>xl: {MEDIA_QUERY_MAP.xl}</div>}
               </React.Fragment>
             )}
-          </MediaQuery.Consumer>
+          </MediaProvider.Consumer>
         </div>
-      </MediaQuery>
+      </MediaProvider>
     );
   }
 }

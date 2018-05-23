@@ -1,1 +1,1 @@
-export { MediaQuery } from './lib/MediaQuery';
+export { MediaProvider } from './lib/MediaProvider';

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-testing-library';
 import 'dom-testing-library/extend-expect';
 
-import { MediaQuery } from '../MediaQuery';
+import { MediaProvider } from '../MediaProvider';
 
 jest.useFakeTimers();
 
@@ -13,10 +13,10 @@ const QUERY_MAP = {
 };
 
 const App = () => (
-  <MediaQuery queryMap={QUERY_MAP}>
+  <MediaProvider queryMap={QUERY_MAP}>
     <div>
       Some parent div for testing context reach!
-      <MediaQuery.Consumer>
+      <MediaProvider.Consumer>
         {({ small, medium, large }) => (
           <React.Fragment>
             {small && <div>small: {QUERY_MAP.small}</div>}
@@ -24,9 +24,9 @@ const App = () => (
             {large && <div>large: {QUERY_MAP.large}</div>}
           </React.Fragment>
         )}
-      </MediaQuery.Consumer>
+      </MediaProvider.Consumer>
     </div>
-  </MediaQuery>
+  </MediaProvider>
 );
 
 describe('MediaQuery', () => {
