@@ -14,7 +14,7 @@ export default class App extends Component {
     return (
       <MediaQuery queryMap={MEDIA_QUERY_MAP}>
         <div>
-          <h1>React Media Query Provider Demo</h1>
+          <h1>React Media Provider Demo</h1>
           <h2>Resize this window to see what happens!</h2>
           <MediaQuery.Consumer>
             {({ xs, sm, md, lg, xl }) => (
