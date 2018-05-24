@@ -1,6 +1,6 @@
 {
   "name": "react-media-provider",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "Application wide media queries",
   "author": "Osmel Mora",
   "license": "MIT",
