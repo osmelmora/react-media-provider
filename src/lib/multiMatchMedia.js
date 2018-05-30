@@ -1,10 +1,6 @@
-const UPDATE_WAIT_TIME = 150;
 const isEmpty = obj => Reflect.ownKeys(obj).length === 0;
 
-export const multiMatchMedia = (
-  mediaQueryMap,
-  updateWaitTime = UPDATE_WAIT_TIME
-) => {
+export const multiMatchMedia = (mediaQueryMap, batchUpdateTimeout) => {
   let subscriber = null;
   let matches = {};
 
@@ -33,7 +29,7 @@ export const multiMatchMedia = (
     if (!waitingForUpdate && isEmpty(temporalUpdateMap)) {
       waitingForUpdate = true;
 
-      setTimeout(update, updateWaitTime);
+      setTimeout(update, batchUpdateTimeout);
     }
 
     temporalUpdateMap[key] = event.matches;

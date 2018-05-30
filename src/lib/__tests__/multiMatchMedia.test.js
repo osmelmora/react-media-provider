@@ -22,10 +22,13 @@ describe('multiMatchMedia', () => {
       .mockReturnValueOnce(makeMockedMatchMedia(true))
       .mockReturnValueOnce(makeMockedMatchMedia(false));
 
-    multiMatchMediaInstance = multiMatchMedia({
-      xs: '(max-width: 378px)',
-      sm: '(min-width: 379px)',
-    });
+    multiMatchMediaInstance = multiMatchMedia(
+      {
+        xs: '(max-width: 378px)',
+        sm: '(min-width: 379px)',
+      },
+      150
+    );
   });
 
   afterEach(() => {
