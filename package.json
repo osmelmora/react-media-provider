@@ -1,6 +1,6 @@
 {
   "name": "react-media-provider",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Application wide media queries",
   "author": "Osmel Mora",
   "license": "MIT",
@@ -29,15 +29,16 @@
     ],
     "*.js": "lint"
   },
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "create-react-context": "^0.2.2",
     "create-subscription": "^16.3.2",
     "fbjs": "^0.8.16",
+    "react-lifecycles-compat": "^3.0.4"
+  },
+  "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
-    "react-lifecycles-compat": "^3.0.3"
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -46,8 +47,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "create-react-context": "^0.2.2",
-    "create-subscription": "^16.3.2",
     "cross-env": "^5.1.4",
     "dom-testing-library": "^2.3.0",
     "eslint": "^4.19.1",
@@ -59,14 +58,12 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
-    "fbjs": "^0.8.16",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
     "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-lifecycles-compat": "^3.0.3",
     "react-scripts": "^1.1.1",
     "react-testing-library": "^3.0.2",
     "rimraf": "^2.6.2",
